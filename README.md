@@ -187,6 +187,31 @@ This script captures keystrokes and provides a web-based UI to view the logs.
 - **Port 53 in use:** Change the port in both 'server.py' and 'keylogger.py' to a port that is not in use.
 - **Permission Denied Errors:** Ensure you have the necessary permissions to run the scripts and access network connections.
 - **Failed to fetch clipboard data:** Ensure xclip is properly installed and accessible.
+
+## Screenshots
+
+1. Start the server
+
+   ![image](https://github.com/sonaliiiiiiiiii/keylogger/assets/125906743/37861c92-d65b-4504-a338-d20fda7cc3f3)
+
+3. Start the keylogger
+   - Without UI
+
+     ![image](https://github.com/sonaliiiiiiiiii/keylogger/assets/125906743/08c900c6-b5d0-42dd-8d95-a6a28046fc74)
+
+   - With UI
+
+     ![image](https://github.com/sonaliiiiiiiiii/keylogger/assets/125906743/2feeff72-cf53-447d-9d15-d0228ac705a3)
+
+4. View Keylogs
+   - Without UI
+
+     ![image](https://github.com/sonaliiiiiiiiii/keylogger/assets/125906743/ace75d3a-9b32-44d4-a96f-ec4abaa8ee71)
+
+   - With UI
+
+     ![image](https://github.com/sonaliiiiiiiiii/keylogger/assets/125906743/64adb9fb-5aa7-4a25-9edb-9d6e267459db)
+
 ## Future Scope
 
 1. **Enhanced User Interface**: Improve the desktop UI with additional features such as filtering, search functionality, and customizable log views for better user experience.
