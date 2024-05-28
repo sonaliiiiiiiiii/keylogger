@@ -1,7 +1,12 @@
 
-# Keylogger
+# Keylogger & clipboard data logger
 
-This project consists of a keylogger that captures keystrokes and clipboard data from a client machine and sends it to a server. The server listens for incoming connections and logs the received data into a file.
+This project consists of a keylogger that captures keystrokes on a client machine and sends this information to a server. It also has a feature to log clipboard data. Additionally, it includes a web-based UI to view the logs.
+
+
+## Authors
+
+- [@sonaliiiiiiiiii](https://github.com/sonaliiiiiiiiii)
 
 
 ## Disclaimer
@@ -11,18 +16,33 @@ This project is for educational purposes only. Unauthorized use of keyloggers is
 
 
 
-## Authors
+## Features
 
-- [@sonaliiiiiiiiii](https://github.com/sonaliiiiiiiiii)
-
+- Keylogging: Captures all keystrokes on the client machine.
+- Clipboard Logging: Captures data copied to the clipboard (only in keylogger.py).
+- Server Logging: Logs all received data into a file on the server.
+- Remote Access: Allows monitoring from a remote machine.
+- UI: Provides a simple web-based user interface to view logs (in keylogger_ui.py)
 
 ## Pre-requisites
 
-- **Operating System:** Kali Linux running on a Virtual Machine (VM).
-- **Python 3.x:** Ensure you have Python 3.x installed.
-- **pip:** Python package installer.
-- **xclip:** A command-line utility that provides clipboard access in Linux.
-- **Network Access:** The client machine must be able to connect to the server machine over the network.
+- Python 3.6+
+- Kali Linux VM
+- pip (Python package installer)
+- Python Libraries (pynput, socket, subprocess)
+
+You can install them using the following commands:
+
+```bash
+pip install pynput
+pip install pandas
+```
+
+For clipboard access, install xclip:
+
+```bash
+sudo apt-get install xclip
+```
 ## Installation
 
 1. Install Python 3.x and pip:
@@ -45,29 +65,48 @@ Install xclip for clipboard access:
 
 3. Set Up Server:
 
-Modify the 'SERVER_ADDRESS' in keylogger.py to the IP address of your server.
+Modify the 'SERVER_ADDRESS' in 'keylogger.py' and 'keylogger_ui.py' to the IP address of your server.
 
 
 ## Usage
 
 **Running the Server**
 
-Navigate to the directory containing server.py.
-Run the server script:
+1. Start the Server:
+
 ```bash
 python3 server.py
 ```
-The server will start and listen on port 53 for incoming connections. All received data will be saved to credentials.log in the same directory.
+2. Check Server Status:
 
-**Running the Keylogger**
+Ensure the server is running and listening on the specified port.
 
-Navigate to the directory containing keylogger.py.
-Run the keylogger script:
+3. Running the Keylogger
+
+- To start Keylogger without UI:
+
+On the client machine, run:
 ```bash
 python3 keylogger.py
 ```
-The keylogger will start capturing keystrokes and clipboard data and send it to the server.
+- To start Keylogger with UI:
 
+On the client machine, run:
+```bash
+python3 keylogger_ui.py
+```
+
+4. Viewing Logs
+
+- On the Server:
+
+View the log file credentials.log to see the captured keystrokes and clipboard data.
+```bash
+tail -f credentials.log
+```
+- Using UI:
+
+Open a web browser and navigate to the server’s IP address and port specified in keylogger_ui.py to view the logs.
 
 ## Used By
 
@@ -86,6 +125,10 @@ This script sets up a TCP server that listens for incoming connections on port 5
 **keylogger.py**
 
 This script captures keystrokes and clipboard data on the client machine and sends it to the server.
+
+**keylogger_ui.py**
+
+This script captures keystrokes and provides a web-based UI to view the logs.
 ## Deployment
 
 ### 1. Server Setup
@@ -98,7 +141,7 @@ This script captures keystrokes and clipboard data on the client machine and sen
      ```
 
 3. **Configure Server**:
-   - Modify the `SERVER_ADDRESS` in `keylogger.py` to the server's IP address.
+   - Modify the `SERVER_ADDRESS` in `keylogger.py` and `keylogger_ui.py` to the server's IP address.
 
 4. **Run Server**:
    - Start the server script:
@@ -117,6 +160,10 @@ This script captures keystrokes and clipboard data on the client machine and sen
    - Run the keylogger script on each client machine:
      ```bash
      python3 keylogger.py
+     ```
+     or
+     ```bash
+     python3 keylogger_ui.py
      ```
    - The keylogger will start capturing keystrokes and clipboard data and send it to the server.
 
