@@ -29,13 +29,13 @@ This project is for educational purposes only. Unauthorized use of keyloggers is
 - Python 3.6+
 - Kali Linux VM
 - pip (Python package installer)
-- Python Libraries (pynput, socket, subprocess)
+- Python Libraries (pynput, socket, subprocess, pandas, tkinter)
 
 You can install them using the following commands:
 
 ```bash
-pip install pynput
-pip install pandas
+pip install pynput pandas
+sudo apt-get install python3-tk
 ```
 
 For clipboard access, install xclip:
@@ -56,7 +56,9 @@ sudo apt-get install xclip
 Use pip to install the necessary Python libraries:
 
 ```bash
-  pip install pynput
+  pip install pynput pandas
+  sudo apt-get install python3-tk
+
 ```
 Install xclip for clipboard access:
 ```bash
