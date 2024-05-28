@@ -187,3 +187,14 @@ This script captures keystrokes and provides a web-based UI to view the logs.
 - **Port 53 in use:** Change the port in both 'server.py' and 'keylogger.py' to a port that is not in use.
 - **Permission Denied Errors:** Ensure you have the necessary permissions to run the scripts and access network connections.
 - **Failed to fetch clipboard data:** Ensure xclip is properly installed and accessible.
+## Future Scope
+
+1. **Enhanced User Interface**: Improve the desktop UI with additional features such as filtering, search functionality, and customizable log views for better user experience.
+
+2. **Encryption and Security**: Implement advanced encryption techniques to secure the transmitted data between the client and server, ensuring confidentiality and integrity of the logs.
+
+3. **Cross-Platform Support**: Extend the application to support multiple operating systems such as Windows, macOS, and Linux, allowing users to monitor and manage logs across different platforms.
+
+4. **Remote Monitoring and Management**: Develop a web-based dashboard or mobile application for remote access to the logs, enabling administrators to monitor and manage the keylogger from anywhere.
+
+5. **Antivirus Evasion**: Research and implement techniques to make the keylogger undetectable for antivirus software, ensuring stealthy operation on target systems.
